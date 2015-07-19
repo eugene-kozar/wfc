@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+	<PreferenceCategory
+        android:key="general"
+        android:title="General" >	
+		<Preference 
+	        android:title="About"
+	        android:summary="Know more about app"  >
+	        <intent 
+	            android:targetPackage="fb.wallpaper.chat"
+	            android:targetClass="fb.wallpaper.chat.AboutActivity"
+	            android:action="fb.wallpaper.chat.AboutAction" />
+	    </Preference>
+	    
+		<Preference 
+	        android:title="Share app"
+	        android:summary="Spread the world..."  >
+	       <intent android:action="android.intent.action.VIEW"
+	            android:data="https://play.google.com" >          
+	       </intent>
+	    </Preference>
+	    
+		<CheckBoxPreference
+            android:defaultValue="true"
+            android:key="home_screen"
+            android:title="Set background on home screen"
+            android:summary="Automatically set selected background on your home screen" />
+	    
+		<!-- <Preference 
+	        android:title="Advertisements"
+	        android:summary="Turn off advertisements"  >
+	       <intent android:action="android.intent.action.VIEW"
+	            android:data="https://play.google.com" >          
+	       </intent>
+	    </Preference> -->
+	    
+	   <!--  <ListPreference
+	        android:defaultValue="@string/default_scheme"
+	        android:dialogTitle="Color scheme"
+	        android:entries="@array/schemes"
+	        android:entryValues="@array/schemes"
+	        android:key="color_scheme"
+	        android:title="Color scheme" /> -->
+	</PreferenceCategory>
+    
+    <PreferenceCategory
+        android:key="buddies"
+        android:title="Buddies" >
+        <ListPreference
+            android:defaultValue="@string/default_sort"
+            android:dialogTitle="Sort by"
+            android:entries="@array/buddies_sort"
+            android:entryValues="@array/buddies_sort"
+            android:key="buddies_sort"
+            android:title="Sort buddies by" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="hide_offline"
+            android:title="Hide offline buddies" />
+    </PreferenceCategory>
+    
+    <PreferenceCategory
+        android:key="chats"
+        android:title="Chats" >
+        <ListPreference
+            android:defaultValue="@string/default_bubble_in"
+            android:dialogTitle="Incoming bubble color"
+            android:entries="@array/colors"
+            android:entryValues="@array/colors"
+            android:persistent="true"
+            android:key="incoming_bubble_color"
+            android:title="Incoming bubble color" />
+        <ListPreference
+            android:defaultValue="@string/default_bubble_out"
+            android:dialogTitle="Outgoing bubble color"
+            android:entries="@array/colors"
+            android:entryValues="@array/colors"
+            android:key="outgoing_bubble_color"
+            android:title="Outgoing bubble color" />
+    </PreferenceCategory>
+    
+    <PreferenceCategory
+        android:key="sounds"
+        android:title="Sounds" >
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="message_app_open"
+            android:title="New Message, App Open" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="message_app_background"
+            android:title="New Message, App Background" />
+        <RingtonePreference 
+            android:key="ringtone"
+	        android:ringtoneType="notification"
+	        android:title="Sent message sound" />
+    </PreferenceCategory>
+    
+    <PreferenceCategory
+        android:key="text_input"
+        android:title="Text input" >
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="auto_correct"
+            android:title="Auto correct" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="auto_capitalization"
+            android:title="Auto Capitalization" />
+        <!-- <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="allow_landscape"
+            android:title="Allow landscape" /> -->
+    </PreferenceCategory>
+    
+   <!-- <PreferenceCategory
+        android:key="session"
+        android:title="Session" >
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="auto_login"
+            android:title="Auto Login" />
+         <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="auto_away"
+            android:title="Auto Away" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="auto_away_message"
+            android:title="Auto Away Message" /> 
+    </PreferenceCategory> -->
+    
+    <PreferenceCategory
+        android:key="alerts"
+        android:title="Push alerts" >
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="push_alerts"
+            android:title="Enable push alerts" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="alert_each_message"
+            android:title="Alert each message" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="show_alert_preview"
+            android:title="Show preview" />
+    </PreferenceCategory>
+
+</PreferenceScreen>

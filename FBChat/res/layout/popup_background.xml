@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:padding="10dip"
+    android:id="@+id/popup_background_layout" >
+    
+    <!-- <Spinner
+        android:id="@+id/picture_category"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:entries="@array/picture_categories"
+        android:prompt="@string/picture_category"
+        android:spinnerMode="dropdown"
+        android:background="@drawable/background_spinner" /> -->
+
+    <Gallery
+        android:id="@+id/gallery"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:paddingTop="10sp"
+        android:paddingBottom="10sp"
+        android:spacing="1dp" />
+    
+    <Button 
+        android:id="@+id/set_background_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Set background"
+        android:padding="10sp"
+        android:textColor="#FFFFFF"
+        android:background="#5C5C5C"/>
+
+</LinearLayout>
